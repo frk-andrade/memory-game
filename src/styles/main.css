@@ -29,6 +29,8 @@ h2 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 .reset {
