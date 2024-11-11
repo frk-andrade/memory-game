@@ -3,7 +3,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #a2a9ef;
+  background-color:black;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   user-select: none; /*Não permite o usuário selecionar conteudo na tela*/
 }
 
@@ -17,8 +24,8 @@ body {
   background: linear-gradient(
     325deg,
     #03001e 0%,
-    #7303c0 30%,
-    #ec38bc 70%,
+    #a09cec 30%,
+    #8cb8f1 70%,
     #03001e 100%
   );
   padding: 40px 60px;
@@ -94,7 +101,7 @@ h2 {
       #613 10px,
       rgba(96, 16, 48, 0) 11px
     ),
-    rgb(176, 177, 83);
+    rgb(144, 83, 177);
   background-size: 20px 20px;
   transition: 0.25s;
   transform: rotateY(0deg);
