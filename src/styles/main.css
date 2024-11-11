@@ -1,95 +1,111 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #eaabfc;
-    user-select: none; /*Não permite o usuário selecionar conteudo na tela*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #a2a9ef;
+  user-select: none; /*Não permite o usuário selecionar conteudo na tela*/
 }
 
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background: linear-gradient(325deg,
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(
+    325deg,
     #03001e 0%,
     #7303c0 30%,
     #ec38bc 70%,
-    #fdeff9 100%);
-    padding: 40px 60px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    #03001e 100%
+  );
+  padding: 40px 60px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 h2 {
-    font-size: 3em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .reset {
-    padding: 15px 20px;
-    width: 100%;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 600;
+  padding: 15px 20px;
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .reset:focus {
-    color: #ec38bc;
-    background-color: #262809;
+  color: #ec38bc;
+  background-color: #262809;
 }
 
 .game {
-    width: 430px;
-    height: 430px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    transform-style: preserve-3d;
-    perspective: 500px;
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
 }
 
 .item {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 
-    font-size: 3em;
-    transform: rotateY(180deg);
-    transition: 0.25s;
+  font-size: 3em;
+  transform: rotateY(180deg);
+  transition: 0.25s;
 }
 
 .item::after {
-    content: "";
-    position: absolute;
-    inset: 0; /*define o ponto zero*/
-    background: #404040;
-    transition: 0.25s;
-    transform: rotateY(0deg);
-    backface-visibility: hidden;
+  content: "";
+  position: absolute;
+  inset: 0; /*define o ponto zero*/
+  background: radial-gradient(
+        circle at 0% 50%,
+        rgba(96, 16, 48, 0) 9px,
+        #613 10px,
+        rgba(96, 16, 48, 0) 11px
+      )
+      0px 10px,
+    radial-gradient(
+      at 100% 100%,
+      rgba(96, 16, 48, 0) 9px,
+      #613 10px,
+      rgba(96, 16, 48, 0) 11px
+    ),
+    rgb(176, 177, 83);
+  background-size: 20px 20px;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
 }
 
 .item.boxOpen {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .boxOpen::after,
 .boxMatch::after {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
